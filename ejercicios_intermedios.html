@@ -1,23 +1,29 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>JavaScript</title>
-    </head>
-    <body>
-        <h1>Ejercicios Intermedios</h1>
-        <h3>Ejercicio 21</h3>
-        <label>Nombre:</label>
-        <input type="text" id="nombre"><br>
-        <button type="button" id="boton1">Aceptar</button>
-        <script src="./js/ejercicio21.js" language="JavaScript" type="text/javascript"></script>
-        <h3>Ejercicio 22</h3>
-        <label>Euros:</label>
-        <input type="number" id="euros"><br>
-        <label>Bitcoins:</label>
-        <input type="number" id="bitcoins"><br>
-        <button type="button" id="aceptar">Aceptar</button>
-        <button type="button" id="limpiar">Limpiar</button>
-        <script src="./js/ejercicio22.js" language="JavaScript" type="text/javascript"></script>
-    </body>
-</html>
+document.getElementById("aceptar").onclick = function(){
+    let euros = document.getElementById("euros").value;
+    let bitcoins = document.getElementById("bitcoins").value;
+    let resultado = "";
+
+    // 1€ = 0.000040 BTC
+    // 1 BTC = 25950€
+
+    if (euros && !bitcoins){
+        resultado = euros * 0.000040;
+        resultado = `El resultado de la conversión es: ${resultado} bitcoins`;
+    }
+
+    else if (!euros && bitcoins){
+        resultado = bitcoins * 25950;
+        resultado = `El resultado de la conversión es: ${resultado} euros`;
+    }
+
+    else{
+        alert("Rellene únicamente un campo");
+    }
+
+    document.getElementById("resultado").innerHTML = resultado;
+}
+
+document.getElementById("limpiar").onclick = function(){
+    document.getElementById("euros").value = "";
+    document.getElementById("bitcoins").value = "";
+}
