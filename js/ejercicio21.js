@@ -1,2 +1,4 @@
-document.write("<h3>Ejercicio 21</h3>");
-
+document.getElementById("boton1").onclick = function (){
+    let nombre = document.getElementById("nombre").value;
+    alert("Hola", nombre);
+}
