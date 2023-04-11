@@ -41,6 +41,40 @@ else{
     document.write("<p>El múltiplo no es número de tres</p>")
 }
 
+// Arrays
+
+let $array1 = new Array(); // Vacío
+let $array2 = new Array(3); // Vacío con tamaño
+let $array3 = new Array("Audi", "BMW", "Peugeot", "Ford"); // Creación con valores
+let $array4 = []; // Vacío
+
+$array2[1] = 33; // Le doy valor en la posición 1
+$array2.push(80); // Añado al final del array el valor 80
+
+$array1[5] = 5 // Al estar vacío crea hasta la posición 5 dejando 0-4 undefined
+
+for (i=0; i < $array2.length; i++){
+    document.writeln($array2[i]); // Imprimo el array
+}
+
+let $array5 = new Array(2); // Array bidimensional
+$array5[0] = new Array(2); // Dentro de la posición 0 creo otro array de tamaño 2
+$array5[1] = new Array(2); // Dentro de la posición 1 creo otro array de tamaño 2
+$array5[0][0] = 12; // Le doy valor en una posición
+
+// Funciones Strings
+
+let $cadena1 = "Esta es mi cadena";
+
+$cadena1.toLowerCase(); // Todo en minúsculas
+$cadena1.toUpperCase(); // Todo en mayúsculas
+$cadena1.substring(3, 8); // Devuelve el texto entre estas posiciones incluyendo el primer valor y excluyendo el último
+$cadena1.indexOf("i"); // Posición de la primera i de la cadena
+$cadena1.lastIndexOf("a"); // Posición de la última a de la cadena
+$cadena1.split(" "); // Caracter con el cuál cortara la cadena en el nuevo array
+
+// Funciones
+
 function suma($param1, $param2){
     $suma = $param1 + $param2;
     document.write("<p>La suma de y más z es: " + $suma);
