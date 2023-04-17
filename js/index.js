@@ -68,10 +68,31 @@ let $cadena1 = "Esta es mi cadena";
 
 $cadena1.toLowerCase(); // Todo en minúsculas
 $cadena1.toUpperCase(); // Todo en mayúsculas
-$cadena1.substring(3, 8); // Devuelve el texto entre estas posiciones incluyendo el primer valor y excluyendo el último
+$cadena1.substring(3, 8); // Devuelve el texto entre las posiciones incluyendo el primer valor y excluyendo el último
 $cadena1.indexOf("i"); // Posición de la primera i de la cadena
 $cadena1.lastIndexOf("a"); // Posición de la última a de la cadena
-$cadena1.split(" "); // Caracter con el cuál cortara la cadena en el nuevo array
+$cadena1.split(" "); // Caracter con el cuál cortará la cadena en el nuevo array
+
+// Fechas
+
+let fecha_actual = new Date();
+let fecha = new Date(2023, 3, 1, 16, 0); // Los meses empiezan en 0 y las semanas en Domingo (lunes = 1)
+document.write("<p>Fecha actual: " + fecha + "</p>");
+
+document.write("<p>Día de la semana: " + fecha_actual.getDay() + "</p>");
+document.write("<p>Día del mes: " + fecha_actual.getDate() + "</p>");
+document.write("<p>Mes del año: " + (fecha_actual.getMonth()+1) + "</p>");
+document.write("<p>Año: " + fecha_actual.getFullYear() + "</p>");
+document.write("<p>Horas: " + fecha_actual.getHours() + "</p>");
+document.write("<p>Minutos: " + fecha_actual.getMinutes() + "</p>");
+document.write("<p>Segundos: " + fecha_actual.getSeconds() + "</p>");
+
+// Alert & Prompt
+
+alert("Hola, bienvenido");
+
+let nombreUsuario = prompt("Dime tu nombre: ", "Usuario"); // Usuario = valor por defecto (opcional)
+document.write("Hola " + nombreUsuario); // Si le das a cancelar, nombreUsuario = null
 
 // Funciones
 
