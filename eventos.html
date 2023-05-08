@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <title>Eventos JS</title>
 </head>
-<body onkeydown="pulsada(event)"> <!-- Cuando carga la página -->
+<body onresize="captura('cambiando tamaño...')"> <!-- Cuando carga la página -->
     <h1 onclick="captura('onclick')">Javascript</h1> <!-- Cuando se hace click -->
+    <form onsubmit="envio('onsubmit')" onreset="limpiar('onreset')">
+        Nombre: <input type="text" placeholder="Escribe tu nombre" onblur="captura('onblur')" onfocus="captura('onfocus')" onchange="cambiar()">
+        <input type="submit" value="Aceptar">
+        <input type="reset" value="Limpiar">
+    </form>
     <button value="Hola" ondblclick="captura('ondblclick')">Hola</button> <!-- Cuando se hace doble click -->
     <h1 onmouseover="captura('onmouseover')">Pon el ratón aquí</h1> <!-- Cuando pongo el ratón encima -->
     <h1 onmouseover="coordenadas(event)">Coordenadas</h1>
