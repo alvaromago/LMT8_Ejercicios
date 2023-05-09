@@ -1,5 +1,3 @@
-document.getElementById("nombre");
-
 function captura(tipo){
     console.log("Evento capturado: " + tipo);
 }
@@ -19,9 +17,23 @@ function cambiar(){
 }
 
 function envio(){
-    alert("Se ha ejecutado el submit");
+    let nombre = document.getElementById("nombre");
+    let parrafos = document.getElementsByTagName("p");
+    alert("El texto introducido es " + parrafos[1].textContent); // nombre.value
 }
 
 function limpiar(){
     alert("Se ha ejecutado el limpiar");
+}
+
+function crearNodo(){
+    let parrafo = document.createElement("p");
+    let texto = document.createTextNode("Párrafo 4");
+    parrafo.appendChild(texto);
+    document.body.appendChild(parrafo);
+}
+
+function eliminarNodo(){
+    let elemento_nombre = document.getElementById("nombre");
+    elemento_nombre.parentNode.removeChild(elemento_nombre);
 }

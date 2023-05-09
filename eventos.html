@@ -6,8 +6,8 @@
 </head>
 <body onresize="captura('cambiando tamaño...')"> <!-- Cuando carga la página -->
     <h1 onclick="captura('onclick')">Javascript</h1> <!-- Cuando se hace click -->
-    <form onsubmit="envio('onsubmit')" onreset="limpiar('onreset')">
-        Nombre: <input type="text" placeholder="Escribe tu nombre" onblur="captura('onblur')" onfocus="captura('onfocus')" onchange="cambiar()">
+    <form onsubmit="envio()" onreset="limpiar()">
+        Nombre: <input type="text" id="nombre" placeholder="Escribe tu nombre" onblur="captura('onblur')" onfocus="captura('onfocus')" onchange="cambiar()">
         <input type="submit" value="Aceptar">
         <input type="reset" value="Limpiar">
     </form>
@@ -20,6 +20,11 @@
     onmouseup = cuando sueltas el ratón
     onmouseout = cuando sales del elemento
     -->
+    <p>Parrafo 1</p>
+    <p>Parrafo 2</p>
+    <p>Parrafo 3</p>
+    <button onclick="crearNodo()">Leer más</button>
+    <button onclick="eliminarNodo()">Borrar</button>
     <script lang="javascript" type="text/javascript" src="./js/eventos.js"></script>
 </body>
 </html>
