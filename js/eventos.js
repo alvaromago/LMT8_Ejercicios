@@ -37,3 +37,14 @@ function eliminarNodo(){
     let elemento_nombre = document.getElementById("nombre");
     elemento_nombre.parentNode.removeChild(elemento_nombre);
 }
+
+function mostrarNavegador(){
+    console.log(navigator.appName);
+    console.log(navigator.appVersion);
+    console.log(navigator.platform);
+    console.log(navigator.javaEnabled);
+    console.log(navigator.cookieEnabled);
+
+    console.log(screen.width);
+    console.log(screen.height);
+}
